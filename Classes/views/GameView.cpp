@@ -65,48 +65,52 @@ void GameView::_initializeLayout()
 void GameView::_createPlayfieldArea()
 {
     _playfieldNode = Node::create();
-    _playfieldNode->setPosition(Vec2(GameConfig::kDesignWidth * 0.5f, GameConfig::kPlayfieldPosY * 0.5f));
+    _playfieldNode->setAnchorPoint(Vec2::ZERO);
+    _playfieldNode->setPosition(Vec2(0, GameConfig::kStackAreaHeight));
     _playfieldNode->setContentSize(Size(GameConfig::kPlayfieldWidth, GameConfig::kPlayfieldHeight));
     addChild(_playfieldNode);
     
-    // 绘制区域背景（用于调试）
+    // 绘制棕色背景
     auto drawNode = DrawNode::create();
-    drawNode->drawRect(
+    drawNode->drawSolidRect(
         Vec2::ZERO,
         Vec2(GameConfig::kPlayfieldWidth, GameConfig::kPlayfieldHeight),
-        Color4F(0.8f, 0.8f, 0.8f, 0.3f)
+        Color4F(0.71f, 0.55f, 0.35f, 1.0f)  // 棕色背景
     );
-    _playfieldNode->addChild(drawNode);
+    _playfieldNode->addChild(drawNode, -1);
 }
 
 void GameView::_createStackArea()
 {
     _stackNode = Node::create();
-    _stackNode->setPosition(Vec2(GameConfig::kDesignWidth * 0.5f, GameConfig::kStackAreaPosY * 0.5f));
+    _stackNode->setAnchorPoint(Vec2::ZERO);
+    _stackNode->setPosition(Vec2::ZERO);
     _stackNode->setContentSize(Size(GameConfig::kStackAreaWidth, GameConfig::kStackAreaHeight));
     addChild(_stackNode);
     
-    // 绘制区域背景（用于调试）
+    // 绘制紫色背景
     auto drawNode = DrawNode::create();
-    drawNode->drawRect(
+    drawNode->drawSolidRect(
         Vec2::ZERO,
         Vec2(GameConfig::kStackAreaWidth, GameConfig::kStackAreaHeight),
-        Color4F(0.9f, 0.9f, 0.9f, 0.3f)
+        Color4F(0.62f, 0.25f, 0.62f, 1.0f)  // 紫色背景
     );
-    _stackNode->addChild(drawNode);
+    _stackNode->addChild(drawNode, -1);
 }
 
 void GameView::_initializeButtons()
 {
-    // 撤销按钮
-    auto undoButton = MenuItemFont::create("Undo", [this](Ref* sender) {
+    // 撤销按钮（显示中文"回退"）
+    auto undoLabel = Label::createWithSystemFont("回退", "Arial", 36);
+    auto undoButton = MenuItemLabel::create(undoLabel, [this](Ref* sender) {
         if (_onUndoClickCallback) {
             _onUndoClickCallback();
         }
     });
     
     auto menu = Menu::create(undoButton, nullptr);
-    menu->setPosition(Vec2(100, GameConfig::kDesignHeight - 100));
+    // 放在下方Stack区域的右所
+    menu->setPosition(Vec2(GameConfig::kDesignWidth - 100, GameConfig::kStackAreaHeight / 2));
     addChild(menu);
 }
 
@@ -121,6 +125,13 @@ void GameView::addCardView(CardView* cardView, bool isPlayfield)
     if (parentNode) {
         parentNode->addChild(cardView);
         _cardViews[card->getCardId()] = cardView;
+        
+        // 记录卡牌所属的区域
+        if (isPlayfield) {
+            card->setArea(CardAreaType::PLAYFIELD);
+        } else {
+            card->setArea(CardAreaType::STACK);
+        }
     }
 }
 
@@ -156,17 +167,30 @@ void GameView::setOnUndoClickCallback(const std::function<void()>& callback)
 
 bool GameView::_onTouchBegan(Touch* touch, Event* event)
 {
-    // 这是一个简化的触摸处理，实际应该检测具体点击的卡牌
+    // 获取触摸的世界坐标
     auto touchPos = touch->getLocation();
     
-    // 检测点击的卡牌
-    for (auto& pair : _cardViews) {
-        CardView* cardView = pair.second;
-        if (cardView && cardView->getBoundingBox().containsPoint(touchPos)) {
-            if (_onCardClickCallback) {
-                _onCardClickCallback(pair.first);
+    // 检测点击的卡牌 - 从后往前遍历（后添加的卡牌在上面）
+    // 反向遍历以检测顶层卡牌
+    for (auto it = _cardViews.rbegin(); it != _cardViews.rend(); ++it) {
+        CardView* cardView = it->second;
+        if (cardView) {
+            // 将世界坐标转换为卡牌的本地坐标
+            Vec2 localPos = cardView->convertToNodeSpace(touchPos);
+            Rect boundingBox = Rect(
+                -cardView->getContentSize().width * 0.5f,
+                -cardView->getContentSize().height * 0.5f,
+                cardView->getContentSize().width,
+                cardView->getContentSize().height
+            );
+            
+            if (boundingBox.containsPoint(localPos)) {
+                CCLOG("Touch detected on card %d at pos (%.1f, %.1f)", it->first, touchPos.x, touchPos.y);
+                if (_onCardClickCallback) {
+                    _onCardClickCallback(it->first);
+                }
+                return true;
             }
-            return true;
         }
     }
     

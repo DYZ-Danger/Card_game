@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CardGame (CMake Tools)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "cwd": "${command:cmake.launchTargetDirectory}",
+            "args": [],
+            "stopAtEntry": false,
+            "environment": [],
+            "externalConsole": true
+        },
+        {
+            "name": "CardGame (Ninja build)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/CardGame.exe",
+            "cwd": "${workspaceFolder}/build",
+            "args": [],
+            "stopAtEntry": false,
+            "environment": [],
+            "externalConsole": true
+        },
+        {
+            "name": "CardGame (VS Solution Debug.win32)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/proj.win32/Debug.win32/CardGame.exe",
+            "cwd": "${workspaceFolder}/proj.win32/Debug.win32",
+            "args": [],
+            "stopAtEntry": false,
+            "environment": [],
+            "externalConsole": true
+        }
+    ]
+}

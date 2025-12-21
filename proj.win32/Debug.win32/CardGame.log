@@ -1,0 +1,53 @@
+﻿  AppDelegate.cpp
+  HelloWorldScene.cpp
+  main.cpp
+D:\works\CardGame\Classes\GameScene.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\controllers\GameController.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\models\GameModel.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\models\Card.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\configs\CardEnums.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\views\GameView.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\views\CardView.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\views\CardView.h(93,5): error C2660: “CardView::init”: 函数不接受 0 个参数
+  (compiling source file '../Classes/AppDelegate.cpp')
+      D:\works\CardGame\Classes\views\CardView.h(77,18):
+      参见“CardView::init”的声明
+      D:\works\CardGame\Classes\views\CardView.h(93,5):
+      尝试匹配参数列表“()”时
+  
+D:\works\CardGame\Classes\views\GameView.h(118,5): error C2660: “GameView::init”: 函数不接受 0 个参数
+  (compiling source file '../Classes/AppDelegate.cpp')
+      D:\works\CardGame\Classes\views\GameView.h(33,18):
+      参见“GameView::init”的声明
+      D:\works\CardGame\Classes\views\GameView.h(118,5):
+      尝试匹配参数列表“()”时
+  
+D:\works\CardGame\Classes\managers\UndoManager.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\models\UndoModel.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\configs\LevelConfig.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\utils\LevelConfigLoader.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (compiling source file '../Classes/AppDelegate.cpp')
+  
+D:\works\CardGame\Classes\utils\LevelConfigLoader.h(44,46): error C2653: “rapidjson”: 不是类或命名空间名称
+  (compiling source file '../Classes/AppDelegate.cpp')
+  

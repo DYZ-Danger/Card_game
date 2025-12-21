@@ -4,9 +4,7 @@
  */
 
 #include "LevelConfigLoader.h"
-#include "rapidjson/document.h"
-
-using namespace rapidjson;
+#include "json/document.h"
 
 LevelConfig LevelConfigLoader::loadLevelConfig(int levelId)
 {
@@ -25,7 +23,7 @@ LevelConfig LevelConfigLoader::loadLevelConfigFromString(const std::string& json
     LevelConfig config;
     
     // 解析JSON
-    Document document;
+    rapidjson::Document document;
     document.Parse(jsonString.c_str());
     
     if (document.HasParseError()) {
@@ -40,8 +38,8 @@ LevelConfig LevelConfigLoader::loadLevelConfigFromString(const std::string& json
     
     // 解析主牌区卡牌
     if (document.HasMember("Playfield") && document["Playfield"].IsArray()) {
-        const Value& playfieldArray = document["Playfield"];
-        for (size_t i = 0; i < playfieldArray.Size(); ++i) {
+        const rapidjson::Value& playfieldArray = document["Playfield"];
+        for (rapidjson::SizeType i = 0; i < playfieldArray.Size(); ++i) {
             CardConfig cardConfig = _parseCardConfig(playfieldArray[i]);
             config.playfield.push_back(cardConfig);
         }
@@ -49,8 +47,8 @@ LevelConfig LevelConfigLoader::loadLevelConfigFromString(const std::string& json
     
     // 解析堆牌区卡牌
     if (document.HasMember("Stack") && document["Stack"].IsArray()) {
-        const Value& stackArray = document["Stack"];
-        for (size_t i = 0; i < stackArray.Size(); ++i) {
+        const rapidjson::Value& stackArray = document["Stack"];
+        for (rapidjson::SizeType i = 0; i < stackArray.Size(); ++i) {
             CardConfig cardConfig = _parseCardConfig(stackArray[i]);
             config.stack.push_back(cardConfig);
         }
@@ -77,7 +75,7 @@ CardConfig LevelConfigLoader::_parseCardConfig(const rapidjson::Value& obj)
     
     // 解析位置
     if (obj.HasMember("Position") && obj["Position"].IsObject()) {
-        const Value& posObj = obj["Position"];
+        const rapidjson::Value& posObj = obj["Position"];
         float x = 0, y = 0;
         if (posObj.HasMember("x") && posObj["x"].IsNumber()) {
             x = posObj["x"].GetFloat();

@@ -56,8 +56,14 @@ public:
      * @param callback 回调函数
      */
     void setOnUndoCompleteCallback(const std::function<void(const UndoRecord&)>& callback);
-    
-protected:
+
+    /**
+     * @brief 设置撤销执行回调（由Controller注册）
+     * @param callback 撤销执行回调函数
+     */
+    void setOnApplyUndoCallback(const std::function<void(const UndoRecord&)>& callback);
+
+    // 构造与析构保持可见，便于由持有者显式释放
     UndoManager(GameModel* gameModel);
     virtual ~UndoManager();
     
@@ -65,6 +71,7 @@ private:
     UndoModel* _undoModel;              // 撤销数据模型
     GameModel* _gameModel;              // 游戏模型（用于状态恢复）
     
+    std::function<void(const UndoRecord&)> _onApplyUndoCallback;      // 撤销执行回调（由Controller注册）
     std::function<void(const UndoRecord&)> _onUndoCompleteCallback;   // 撤销完成回调
     
     /**

@@ -65,13 +65,15 @@ void UndoManager::setOnUndoCompleteCallback(const std::function<void(const UndoR
     _onUndoCompleteCallback = callback;
 }
 
+void UndoManager::setOnApplyUndoCallback(const std::function<void(const UndoRecord&)>& callback)
+{
+    _onApplyUndoCallback = callback;
+}
+
 void UndoManager::_applyUndoRecord(const UndoRecord& record)
 {
-    // 这里实现撤销逻辑，根据记录类型恢复状态
-    // 具体实现由controller的使用方决定，这里只提供框架
-    
-    // 在实际应用中，可能需要：
-    // 1. 恢复卡牌位置
-    // 2. 恢复卡牌可见性
-    // 3. 更新游戏模型状态
+    // 通过回调通知Controller执行实际的撤销操作
+    if (_onApplyUndoCallback) {
+        _onApplyUndoCallback(record);
+    }
 }

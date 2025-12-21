@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\works\CardGame\Classes\AppDelegate.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\Classes\models\Card.cpp">
+      <Filter>Source Files\Classes\models</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\Classes\models\GameModel.cpp">
+      <Filter>Source Files\Classes\models</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\Classes\models\UndoModel.cpp">
+      <Filter>Source Files\Classes\models</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\Classes\views\CardView.cpp">
+      <Filter>Source Files\Classes\views</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\Classes\views\GameView.cpp">
+      <Filter>Source Files\Classes\views</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\Classes\controllers\GameController.cpp">
+      <Filter>Source Files\Classes\controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\Classes\managers\UndoManager.cpp">
+      <Filter>Source Files\Classes\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\Classes\services\GameModelGenerator.cpp">
+      <Filter>Source Files\Classes\services</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\Classes\utils\LevelConfigLoader.cpp">
+      <Filter>Source Files\Classes\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\Classes\GameScene.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\proj.win32\main.cpp">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\works\CardGame\cocos2d\cocos\precheader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\works\CardGame\proj.win32\main.h">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\proj.win32\resource.h">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\AppDelegate.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\configs\CardEnums.h">
+      <Filter>Source Files\Classes\configs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\configs\GameConfig.h">
+      <Filter>Source Files\Classes\configs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\configs\LevelConfig.h">
+      <Filter>Source Files\Classes\configs</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\models\Card.h">
+      <Filter>Source Files\Classes\models</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\models\GameModel.h">
+      <Filter>Source Files\Classes\models</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\models\UndoModel.h">
+      <Filter>Source Files\Classes\models</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\views\CardView.h">
+      <Filter>Source Files\Classes\views</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\views\GameView.h">
+      <Filter>Source Files\Classes\views</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\controllers\GameController.h">
+      <Filter>Source Files\Classes\controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\managers\UndoManager.h">
+      <Filter>Source Files\Classes\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\services\GameModelGenerator.h">
+      <Filter>Source Files\Classes\services</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\utils\LevelConfigLoader.h">
+      <Filter>Source Files\Classes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Classes\GameScene.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Resources\CloseNormal.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Resources\CloseSelected.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Resources\HelloWorld.png">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Resources\fonts\Marker Felt.ttf">
+      <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Resources\fonts\arial.ttf">
+      <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Resources\levels\level_1.json">
+      <Filter>Resources\levels</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\works\CardGame\Resources\res\.gitkeep">
+      <Filter>Resources\res</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\works\CardGame\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\works\CardGame\proj.win32\game.rc">
+      <Filter>Source Files\proj.win32</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{83CD32B5-CD01-31F9-9978-CC23DDF5D482}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\fonts">
+      <UniqueIdentifier>{95121515-4987-3A07-9317-9EB45AD97900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\levels">
+      <UniqueIdentifier>{A0353A3F-9778-3481-A09D-66F9D294B29F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\res">
+      <UniqueIdentifier>{A9842017-0F11-37AF-A056-59590484F9B0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{AADED54A-666A-302E-AB55-806511C5D5DA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes">
+      <UniqueIdentifier>{554A5009-4893-38CB-BE2A-99A5A60E161E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\configs">
+      <UniqueIdentifier>{52F122B4-E351-35C7-B17E-358E563034F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\controllers">
+      <UniqueIdentifier>{C4DD6838-BC4D-396D-BE72-D0D074B9FC15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\managers">
+      <UniqueIdentifier>{029B37F9-C369-3761-B783-71C918244663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\models">
+      <UniqueIdentifier>{BD0E9C80-EFCA-321A-9A2C-F6F33FE1A272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\services">
+      <UniqueIdentifier>{24C5058F-531A-3E67-AE8A-FB41584F4FAE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\utils">
+      <UniqueIdentifier>{5DDC30C1-9F9C-3276-8E4B-35640C209040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\views">
+      <UniqueIdentifier>{0863BE6A-9895-3B43-A3B3-7AF8AFF6AA28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\proj.win32">
+      <UniqueIdentifier>{42FEFA9D-9C56-35D9-8CB2-9518410EEF39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7773DFB9-2BC0-32A0-87A6-17DA0E924169}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>Win32</Platform>
+    <ProjectName>CardGame</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\works\CardGame\build\bin\CardGame\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CardGame.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CardGame</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\works\CardGame\build\bin\CardGame\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CardGame.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CardGame</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\works\CardGame\Classes;D:\works\CardGame\cocos2d\cocos\audio\include;D:\works\CardGame\cocos2d;D:\works\CardGame\cocos2d\cocos;D:\works\CardGame\cocos2d\extensions;D:\works\CardGame\cocos2d\cocos\platform;D:\works\CardGame\cocos2d\cocos\base;D:\works\CardGame\cocos2d\cocos\editor-support;D:\works\CardGame\cocos2d\cocos\platform\win32;D:\works\CardGame\cocos2d\external\recast\..;D:\works\CardGame\cocos2d\external\tinyxml2\.;D:\works\CardGame\cocos2d\external\xxhash\.;D:\works\CardGame\cocos2d\external\xxtea\.;D:\works\CardGame\cocos2d\external\clipper\.;D:\works\CardGame\cocos2d\external\edtaa3func\.;D:\works\CardGame\cocos2d\external\ConvertUTF\.;D:\works\CardGame\cocos2d\external\poly2tri\..;D:\works\CardGame\cocos2d\external\md5\..;D:\works\CardGame\cocos2d\external\unzip\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/works/CardGame/cocos2d/external/Box2D/include" /external:I "D:/works/CardGame/cocos2d/external/chipmunk/include" /external:I "D:/works/CardGame/cocos2d/external/freetype2/include/win32/freetype2" /external:I "D:/works/CardGame/cocos2d/external/jpeg/include/win32" /external:I "D:/works/CardGame/cocos2d/external/uv/include" /external:I "D:/works/CardGame/cocos2d/external/webp/include/win32" /external:I "D:/works/CardGame/cocos2d/external/bullet/include" /external:I "D:/works/CardGame/cocos2d/external/bullet/include/bullet" /external:I "D:/works/CardGame/cocos2d/external/openssl/include/win32" /external:I "D:/works/CardGame/cocos2d/external/tiff/include/win32" /external:I "D:/works/CardGame/cocos2d/external/websockets/include/win32" /external:I "D:/works/CardGame/cocos2d/external/curl/include/win32" /external:I "D:/works/CardGame/cocos2d/external/png/include/win32" /external:I "D:/works/CardGame/cocos2d/external/sqlite3/include" /external:I "D:/works/CardGame/cocos2d/external/win32-specific/gles/include/OGLES" /external:I "D:/works/CardGame/cocos2d/external/win32-specific/icon/include" /external:I "D:/works/CardGame/cocos2d/external/win32-specific/MP3Decoder/include" /external:I "D:/works/CardGame/cocos2d/external/win32-specific/OggDecoder/include" /external:I "D:/works/CardGame/cocos2d/external/win32-specific/OpenalSoft/include" /external:I "D:/works/CardGame/cocos2d/external/glfw3/include/win32" /external:I "D:/works/CardGame/cocos2d/external/zlib/../win32-specific/zlib/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\works\CardGame\Classes;D:\works\CardGame\cocos2d\cocos\audio\include;D:\works\CardGame\cocos2d;D:\works\CardGame\cocos2d\cocos;D:\works\CardGame\cocos2d\extensions;D:\works\CardGame\cocos2d\cocos\platform;D:\works\CardGame\cocos2d\cocos\base;D:\works\CardGame\cocos2d\cocos\editor-support;D:\works\CardGame\cocos2d\cocos\platform\win32;D:\works\CardGame\cocos2d\external\recast\..;D:\works\CardGame\cocos2d\external\tinyxml2\.;D:\works\CardGame\cocos2d\external\xxhash\.;D:\works\CardGame\cocos2d\external\xxtea\.;D:\works\CardGame\cocos2d\external\clipper\.;D:\works\CardGame\cocos2d\external\edtaa3func\.;D:\works\CardGame\cocos2d\external\ConvertUTF\.;D:\works\CardGame\cocos2d\external\poly2tri\..;D:\works\CardGame\cocos2d\external\md5\..;D:\works\CardGame\cocos2d\external\unzip\.;D:\works\CardGame\cocos2d\external\Box2D\include;D:\works\CardGame\cocos2d\external\chipmunk\include;D:\works\CardGame\cocos2d\external\freetype2\include\win32\freetype2;D:\works\CardGame\cocos2d\external\jpeg\include\win32;D:\works\CardGame\cocos2d\external\uv\include;D:\works\CardGame\cocos2d\external\webp\include\win32;D:\works\CardGame\cocos2d\external\bullet\include;D:\works\CardGame\cocos2d\external\bullet\include\bullet;D:\works\CardGame\cocos2d\external\openssl\include\win32;D:\works\CardGame\cocos2d\external\tiff\include\win32;D:\works\CardGame\cocos2d\external\websockets\include\win32;D:\works\CardGame\cocos2d\external\curl\include\win32;D:\works\CardGame\cocos2d\external\png\include\win32;D:\works\CardGame\cocos2d\external\sqlite3\include;D:\works\CardGame\cocos2d\external\win32-specific\gles\include\OGLES;D:\works\CardGame\cocos2d\external\win32-specific\icon\include;D:\works\CardGame\cocos2d\external\win32-specific\MP3Decoder\include;D:\works\CardGame\cocos2d\external\win32-specific\OggDecoder\include;D:\works\CardGame\cocos2d\external\win32-specific\OpenalSoft\include;D:\works\CardGame\cocos2d\external\glfw3\include\win32;D:\works\CardGame\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\works\CardGame\Classes;D:\works\CardGame\cocos2d\cocos\audio\include;D:\works\CardGame\cocos2d;D:\works\CardGame\cocos2d\cocos;D:\works\CardGame\cocos2d\extensions;D:\works\CardGame\cocos2d\cocos\platform;D:\works\CardGame\cocos2d\cocos\base;D:\works\CardGame\cocos2d\cocos\editor-support;D:\works\CardGame\cocos2d\cocos\platform\win32;D:\works\CardGame\cocos2d\external\recast\..;D:\works\CardGame\cocos2d\external\tinyxml2\.;D:\works\CardGame\cocos2d\external\xxhash\.;D:\works\CardGame\cocos2d\external\xxtea\.;D:\works\CardGame\cocos2d\external\clipper\.;D:\works\CardGame\cocos2d\external\edtaa3func\.;D:\works\CardGame\cocos2d\external\ConvertUTF\.;D:\works\CardGame\cocos2d\external\poly2tri\..;D:\works\CardGame\cocos2d\external\md5\..;D:\works\CardGame\cocos2d\external\unzip\.;D:\works\CardGame\cocos2d\external\Box2D\include;D:\works\CardGame\cocos2d\external\chipmunk\include;D:\works\CardGame\cocos2d\external\freetype2\include\win32\freetype2;D:\works\CardGame\cocos2d\external\jpeg\include\win32;D:\works\CardGame\cocos2d\external\uv\include;D:\works\CardGame\cocos2d\external\webp\include\win32;D:\works\CardGame\cocos2d\external\bullet\include;D:\works\CardGame\cocos2d\external\bullet\include\bullet;D:\works\CardGame\cocos2d\external\openssl\include\win32;D:\works\CardGame\cocos2d\external\tiff\include\win32;D:\works\CardGame\cocos2d\external\websockets\include\win32;D:\works\CardGame\cocos2d\external\curl\include\win32;D:\works\CardGame\cocos2d\external\png\include\win32;D:\works\CardGame\cocos2d\external\sqlite3\include;D:\works\CardGame\cocos2d\external\win32-specific\gles\include\OGLES;D:\works\CardGame\cocos2d\external\win32-specific\icon\include;D:\works\CardGame\cocos2d\external\win32-specific\MP3Decoder\include;D:\works\CardGame\cocos2d\external\win32-specific\OggDecoder\include;D:\works\CardGame\cocos2d\external\win32-specific\OpenalSoft\include;D:\works\CardGame\cocos2d\external\glfw3\include\win32;D:\works\CardGame\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>																				</Message>
+      <Command>setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: uv.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/uv/prebuilt/win32/uv.dll D:/works/CardGame/build/bin/CardGame/Debug/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libssl-1_1.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/works/CardGame/build/bin/CardGame/Debug/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libcrypto-1_1.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/works/CardGame/build/bin/CardGame/Debug/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: websockets.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/works/CardGame/build/bin/CardGame/Debug/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libcurl.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/works/CardGame/build/bin/CardGame/Debug/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: sqlite3.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/sqlite3/libraries/win32/sqlite3.dll D:/works/CardGame/build/bin/CardGame/Debug/sqlite3.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: glew32.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/works/CardGame/build/bin/CardGame/Debug/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: iconv.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/works/CardGame/build/bin/CardGame/Debug/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libmpg123.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/works/CardGame/build/bin/CardGame/Debug/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libogg.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/works/CardGame/build/bin/CardGame/Debug/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libvorbis.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/works/CardGame/build/bin/CardGame/Debug/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libvorbisfile.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/works/CardGame/build/bin/CardGame/Debug/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: OpenAL32.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/works/CardGame/build/bin/CardGame/Debug/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: zlib1.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/works/CardGame/build/bin/CardGame/Debug/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: CloseNormal.png ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/CloseNormal.png D:/works/CardGame/build/bin/CardGame/Debug/Resources/CloseNormal.png
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: CloseSelected.png ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/CloseSelected.png D:/works/CardGame/build/bin/CardGame/Debug/Resources/CloseSelected.png
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: HelloWorld.png ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/HelloWorld.png D:/works/CardGame/build/bin/CardGame/Debug/Resources/HelloWorld.png
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: fonts/Marker Felt.ttf ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different "D:/works/CardGame/Resources/fonts/Marker Felt.ttf" "D:/works/CardGame/build/bin/CardGame/Debug/Resources/fonts/Marker Felt.ttf"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: fonts/arial.ttf ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/fonts/arial.ttf D:/works/CardGame/build/bin/CardGame/Debug/Resources/fonts/arial.ttf
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: levels/level_1.json ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/levels/level_1.json D:/works/CardGame/build/bin/CardGame/Debug/Resources/levels/level_1.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: res/.gitkeep ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/res/.gitkeep D:/works/CardGame/build/bin/CardGame/Debug/Resources/res/.gitkeep
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\Debug\cocos2d.lib;lib\Debug\external.lib;D:\works\CardGame\cocos2d\external\Box2D\prebuilt\win32\debug\libbox2d.lib;D:\works\CardGame\cocos2d\external\chipmunk\prebuilt\win32\debug-lib\libchipmunk.lib;D:\works\CardGame\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\Debug\ext_recast.lib;D:\works\CardGame\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;D:\works\CardGame\cocos2d\external\webp\prebuilt\win32\libwebp.lib;D:\works\CardGame\cocos2d\external\bullet\prebuilt\win32\debug\libbullet.lib;D:\works\CardGame\cocos2d\external\tiff\prebuilt\win32\libtiff.lib;D:\works\CardGame\cocos2d\external\websockets\prebuilt\win32\websockets.lib;D:\works\CardGame\cocos2d\external\uv\prebuilt\win32\uv_a.lib;D:\works\CardGame\cocos2d\external\openssl\prebuilt\win32\libssl.lib;D:\works\CardGame\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;lib\Debug\ext_tinyxml2.lib;lib\Debug\ext_xxhash.lib;lib\Debug\ext_xxtea.lib;lib\Debug\ext_clipper.lib;lib\Debug\ext_edtaa3func.lib;lib\Debug\ext_convertUTF.lib;lib\Debug\ext_poly2tri.lib;lib\Debug\ext_md5.lib;D:\works\CardGame\cocos2d\external\curl\prebuilt\win32\libcurl.lib;D:\works\CardGame\cocos2d\external\png\prebuilt\win32\libpng.lib;D:\works\CardGame\cocos2d\external\sqlite3\libraries\win32\sqlite3.lib;D:\works\CardGame\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;D:\works\CardGame\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;D:\works\CardGame\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;D:\works\CardGame\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;D:\works\CardGame\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;D:\works\CardGame\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;D:\works\CardGame\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;D:\works\CardGame\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;D:\works\CardGame\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Debug\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/works/CardGame/build/Debug/CardGame.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/works/CardGame/build/bin/CardGame/Debug/CardGame.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\works\CardGame\Classes;D:\works\CardGame\cocos2d\cocos\audio\include;D:\works\CardGame\cocos2d;D:\works\CardGame\cocos2d\cocos;D:\works\CardGame\cocos2d\extensions;D:\works\CardGame\cocos2d\cocos\platform;D:\works\CardGame\cocos2d\cocos\base;D:\works\CardGame\cocos2d\cocos\editor-support;D:\works\CardGame\cocos2d\cocos\platform\win32;D:\works\CardGame\cocos2d\external\recast\..;D:\works\CardGame\cocos2d\external\tinyxml2\.;D:\works\CardGame\cocos2d\external\xxhash\.;D:\works\CardGame\cocos2d\external\xxtea\.;D:\works\CardGame\cocos2d\external\clipper\.;D:\works\CardGame\cocos2d\external\edtaa3func\.;D:\works\CardGame\cocos2d\external\ConvertUTF\.;D:\works\CardGame\cocos2d\external\poly2tri\..;D:\works\CardGame\cocos2d\external\md5\..;D:\works\CardGame\cocos2d\external\unzip\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/works/CardGame/cocos2d/external/Box2D/include" /external:I "D:/works/CardGame/cocos2d/external/chipmunk/include" /external:I "D:/works/CardGame/cocos2d/external/freetype2/include/win32/freetype2" /external:I "D:/works/CardGame/cocos2d/external/jpeg/include/win32" /external:I "D:/works/CardGame/cocos2d/external/uv/include" /external:I "D:/works/CardGame/cocos2d/external/webp/include/win32" /external:I "D:/works/CardGame/cocos2d/external/bullet/include" /external:I "D:/works/CardGame/cocos2d/external/bullet/include/bullet" /external:I "D:/works/CardGame/cocos2d/external/openssl/include/win32" /external:I "D:/works/CardGame/cocos2d/external/tiff/include/win32" /external:I "D:/works/CardGame/cocos2d/external/websockets/include/win32" /external:I "D:/works/CardGame/cocos2d/external/curl/include/win32" /external:I "D:/works/CardGame/cocos2d/external/png/include/win32" /external:I "D:/works/CardGame/cocos2d/external/sqlite3/include" /external:I "D:/works/CardGame/cocos2d/external/win32-specific/gles/include/OGLES" /external:I "D:/works/CardGame/cocos2d/external/win32-specific/icon/include" /external:I "D:/works/CardGame/cocos2d/external/win32-specific/MP3Decoder/include" /external:I "D:/works/CardGame/cocos2d/external/win32-specific/OggDecoder/include" /external:I "D:/works/CardGame/cocos2d/external/win32-specific/OpenalSoft/include" /external:I "D:/works/CardGame/cocos2d/external/glfw3/include/win32" /external:I "D:/works/CardGame/cocos2d/external/zlib/../win32-specific/zlib/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\works\CardGame\Classes;D:\works\CardGame\cocos2d\cocos\audio\include;D:\works\CardGame\cocos2d;D:\works\CardGame\cocos2d\cocos;D:\works\CardGame\cocos2d\extensions;D:\works\CardGame\cocos2d\cocos\platform;D:\works\CardGame\cocos2d\cocos\base;D:\works\CardGame\cocos2d\cocos\editor-support;D:\works\CardGame\cocos2d\cocos\platform\win32;D:\works\CardGame\cocos2d\external\recast\..;D:\works\CardGame\cocos2d\external\tinyxml2\.;D:\works\CardGame\cocos2d\external\xxhash\.;D:\works\CardGame\cocos2d\external\xxtea\.;D:\works\CardGame\cocos2d\external\clipper\.;D:\works\CardGame\cocos2d\external\edtaa3func\.;D:\works\CardGame\cocos2d\external\ConvertUTF\.;D:\works\CardGame\cocos2d\external\poly2tri\..;D:\works\CardGame\cocos2d\external\md5\..;D:\works\CardGame\cocos2d\external\unzip\.;D:\works\CardGame\cocos2d\external\Box2D\include;D:\works\CardGame\cocos2d\external\chipmunk\include;D:\works\CardGame\cocos2d\external\freetype2\include\win32\freetype2;D:\works\CardGame\cocos2d\external\jpeg\include\win32;D:\works\CardGame\cocos2d\external\uv\include;D:\works\CardGame\cocos2d\external\webp\include\win32;D:\works\CardGame\cocos2d\external\bullet\include;D:\works\CardGame\cocos2d\external\bullet\include\bullet;D:\works\CardGame\cocos2d\external\openssl\include\win32;D:\works\CardGame\cocos2d\external\tiff\include\win32;D:\works\CardGame\cocos2d\external\websockets\include\win32;D:\works\CardGame\cocos2d\external\curl\include\win32;D:\works\CardGame\cocos2d\external\png\include\win32;D:\works\CardGame\cocos2d\external\sqlite3\include;D:\works\CardGame\cocos2d\external\win32-specific\gles\include\OGLES;D:\works\CardGame\cocos2d\external\win32-specific\icon\include;D:\works\CardGame\cocos2d\external\win32-specific\MP3Decoder\include;D:\works\CardGame\cocos2d\external\win32-specific\OggDecoder\include;D:\works\CardGame\cocos2d\external\win32-specific\OpenalSoft\include;D:\works\CardGame\cocos2d\external\glfw3\include\win32;D:\works\CardGame\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\works\CardGame\Classes;D:\works\CardGame\cocos2d\cocos\audio\include;D:\works\CardGame\cocos2d;D:\works\CardGame\cocos2d\cocos;D:\works\CardGame\cocos2d\extensions;D:\works\CardGame\cocos2d\cocos\platform;D:\works\CardGame\cocos2d\cocos\base;D:\works\CardGame\cocos2d\cocos\editor-support;D:\works\CardGame\cocos2d\cocos\platform\win32;D:\works\CardGame\cocos2d\external\recast\..;D:\works\CardGame\cocos2d\external\tinyxml2\.;D:\works\CardGame\cocos2d\external\xxhash\.;D:\works\CardGame\cocos2d\external\xxtea\.;D:\works\CardGame\cocos2d\external\clipper\.;D:\works\CardGame\cocos2d\external\edtaa3func\.;D:\works\CardGame\cocos2d\external\ConvertUTF\.;D:\works\CardGame\cocos2d\external\poly2tri\..;D:\works\CardGame\cocos2d\external\md5\..;D:\works\CardGame\cocos2d\external\unzip\.;D:\works\CardGame\cocos2d\external\Box2D\include;D:\works\CardGame\cocos2d\external\chipmunk\include;D:\works\CardGame\cocos2d\external\freetype2\include\win32\freetype2;D:\works\CardGame\cocos2d\external\jpeg\include\win32;D:\works\CardGame\cocos2d\external\uv\include;D:\works\CardGame\cocos2d\external\webp\include\win32;D:\works\CardGame\cocos2d\external\bullet\include;D:\works\CardGame\cocos2d\external\bullet\include\bullet;D:\works\CardGame\cocos2d\external\openssl\include\win32;D:\works\CardGame\cocos2d\external\tiff\include\win32;D:\works\CardGame\cocos2d\external\websockets\include\win32;D:\works\CardGame\cocos2d\external\curl\include\win32;D:\works\CardGame\cocos2d\external\png\include\win32;D:\works\CardGame\cocos2d\external\sqlite3\include;D:\works\CardGame\cocos2d\external\win32-specific\gles\include\OGLES;D:\works\CardGame\cocos2d\external\win32-specific\icon\include;D:\works\CardGame\cocos2d\external\win32-specific\MP3Decoder\include;D:\works\CardGame\cocos2d\external\win32-specific\OggDecoder\include;D:\works\CardGame\cocos2d\external\win32-specific\OpenalSoft\include;D:\works\CardGame\cocos2d\external\glfw3\include\win32;D:\works\CardGame\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>																				</Message>
+      <Command>setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: uv.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/uv/prebuilt/win32/uv.dll D:/works/CardGame/build/bin/CardGame/Release/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libssl-1_1.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/works/CardGame/build/bin/CardGame/Release/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libcrypto-1_1.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/works/CardGame/build/bin/CardGame/Release/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: websockets.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/works/CardGame/build/bin/CardGame/Release/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libcurl.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/works/CardGame/build/bin/CardGame/Release/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: sqlite3.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/sqlite3/libraries/win32/sqlite3.dll D:/works/CardGame/build/bin/CardGame/Release/sqlite3.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: glew32.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/works/CardGame/build/bin/CardGame/Release/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: iconv.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/works/CardGame/build/bin/CardGame/Release/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libmpg123.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/works/CardGame/build/bin/CardGame/Release/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libogg.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/works/CardGame/build/bin/CardGame/Release/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libvorbis.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/works/CardGame/build/bin/CardGame/Release/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: libvorbisfile.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/works/CardGame/build/bin/CardGame/Release/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: OpenAL32.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/works/CardGame/build/bin/CardGame/Release/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy dll into target file dir: zlib1.dll ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/works/CardGame/build/bin/CardGame/Release/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: CloseNormal.png ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/CloseNormal.png D:/works/CardGame/build/bin/CardGame/Release/Resources/CloseNormal.png
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: CloseSelected.png ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/CloseSelected.png D:/works/CardGame/build/bin/CardGame/Release/Resources/CloseSelected.png
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: HelloWorld.png ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/HelloWorld.png D:/works/CardGame/build/bin/CardGame/Release/Resources/HelloWorld.png
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: fonts/Marker Felt.ttf ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different "D:/works/CardGame/Resources/fonts/Marker Felt.ttf" "D:/works/CardGame/build/bin/CardGame/Release/Resources/fonts/Marker Felt.ttf"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: fonts/arial.ttf ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/fonts/arial.ttf D:/works/CardGame/build/bin/CardGame/Release/Resources/fonts/arial.ttf
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: levels/level_1.json ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/levels/level_1.json D:/works/CardGame/build/bin/CardGame/Release/Resources/levels/level_1.json
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+D:\cmake\bin\cmake.exe -E echo "copy file into Resources: res/.gitkeep ..."
+if %errorlevel% neq 0 goto :cmEnd
+D:\cmake\bin\cmake.exe -E copy_if_different D:/works/CardGame/Resources/res/.gitkeep D:/works/CardGame/build/bin/CardGame/Release/Resources/res/.gitkeep
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\Release\cocos2d.lib;lib\Release\external.lib;D:\works\CardGame\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;D:\works\CardGame\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;D:\works\CardGame\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\Release\ext_recast.lib;D:\works\CardGame\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;D:\works\CardGame\cocos2d\external\webp\prebuilt\win32\libwebp.lib;D:\works\CardGame\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;D:\works\CardGame\cocos2d\external\tiff\prebuilt\win32\libtiff.lib;D:\works\CardGame\cocos2d\external\websockets\prebuilt\win32\websockets.lib;D:\works\CardGame\cocos2d\external\uv\prebuilt\win32\uv_a.lib;D:\works\CardGame\cocos2d\external\openssl\prebuilt\win32\libssl.lib;D:\works\CardGame\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;lib\Release\ext_tinyxml2.lib;lib\Release\ext_xxhash.lib;lib\Release\ext_xxtea.lib;lib\Release\ext_clipper.lib;lib\Release\ext_edtaa3func.lib;lib\Release\ext_convertUTF.lib;lib\Release\ext_poly2tri.lib;lib\Release\ext_md5.lib;D:\works\CardGame\cocos2d\external\curl\prebuilt\win32\libcurl.lib;D:\works\CardGame\cocos2d\external\png\prebuilt\win32\libpng.lib;D:\works\CardGame\cocos2d\external\sqlite3\libraries\win32\sqlite3.lib;D:\works\CardGame\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;D:\works\CardGame\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;D:\works\CardGame\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;D:\works\CardGame\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;D:\works\CardGame\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;D:\works\CardGame\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;D:\works\CardGame\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;D:\works\CardGame\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;D:\works\CardGame\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Release\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>D:/works/CardGame/build/Release/CardGame.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>D:/works/CardGame/build/bin/CardGame/Release/CardGame.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\works\CardGame\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/works/CardGame/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\cmake\bin\cmake.exe -SD:/works/CardGame -BD:/works/CardGame/build --check-stamp-file D:/works/CardGame/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\cmake\share\cmake-4.1\Modules\CMakeCCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeCCompilerABI.c;D:\cmake\share\cmake-4.1\Modules\CMakeCInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCXXCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeCXXCompilerABI.cpp;D:\cmake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCompilerIdDetection.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCXXCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerABI.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerId.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerSupport.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineRCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineSystem.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeFindBinUtils.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseArguments.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseImplicitLinkInfo.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseLibraryArchitecture.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeRCCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeSystem.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCXXCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCompilerCommon.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestRCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Diab-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\LCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Renesas-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TI-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CompilerId\VS-10.vcxproj.in;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeInspectCLinker.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeInspectCXXLinker.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\FeatureTesting.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-Determine-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeCCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeSystem.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosConfigDepend.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\works\CardGame\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/works/CardGame/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\cmake\bin\cmake.exe -SD:/works/CardGame -BD:/works/CardGame/build --check-stamp-file D:/works/CardGame/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\cmake\share\cmake-4.1\Modules\CMakeCCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeCCompilerABI.c;D:\cmake\share\cmake-4.1\Modules\CMakeCInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCXXCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeCXXCompilerABI.cpp;D:\cmake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCompilerIdDetection.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCXXCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerABI.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerId.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerSupport.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineRCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineSystem.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeFindBinUtils.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseArguments.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseImplicitLinkInfo.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseLibraryArchitecture.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeRCCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeSystem.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCXXCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCompilerCommon.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestRCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Diab-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\LCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Renesas-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TI-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CompilerId\VS-10.vcxproj.in;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeInspectCLinker.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeInspectCXXLinker.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\FeatureTesting.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-Determine-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeCCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeSystem.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosConfigDepend.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\works\CardGame\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\works\CardGame\proj.win32\main.h" />
+    <ClInclude Include="D:\works\CardGame\proj.win32\resource.h" />
+    <ClInclude Include="D:\works\CardGame\Classes\AppDelegate.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\AppDelegate.cpp" />
+    <ClInclude Include="D:\works\CardGame\Classes\configs\CardEnums.h" />
+    <ClInclude Include="D:\works\CardGame\Classes\configs\GameConfig.h" />
+    <ClInclude Include="D:\works\CardGame\Classes\configs\LevelConfig.h" />
+    <ClInclude Include="D:\works\CardGame\Classes\models\Card.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\models\Card.cpp" />
+    <ClInclude Include="D:\works\CardGame\Classes\models\GameModel.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\models\GameModel.cpp" />
+    <ClInclude Include="D:\works\CardGame\Classes\models\UndoModel.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\models\UndoModel.cpp" />
+    <ClInclude Include="D:\works\CardGame\Classes\views\CardView.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\views\CardView.cpp" />
+    <ClInclude Include="D:\works\CardGame\Classes\views\GameView.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\views\GameView.cpp" />
+    <ClInclude Include="D:\works\CardGame\Classes\controllers\GameController.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\controllers\GameController.cpp" />
+    <ClInclude Include="D:\works\CardGame\Classes\managers\UndoManager.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\managers\UndoManager.cpp" />
+    <ClInclude Include="D:\works\CardGame\Classes\services\GameModelGenerator.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\services\GameModelGenerator.cpp" />
+    <ClInclude Include="D:\works\CardGame\Classes\utils\LevelConfigLoader.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\utils\LevelConfigLoader.cpp" />
+    <ClInclude Include="D:\works\CardGame\Classes\GameScene.h" />
+    <ClCompile Include="D:\works\CardGame\Classes\GameScene.cpp" />
+    <ClCompile Include="D:\works\CardGame\proj.win32\main.cpp" />
+    <ResourceCompile Include="D:\works\CardGame\proj.win32\game.rc" />
+    <ClInclude Include="D:\works\CardGame\Resources\CloseNormal.png" />
+    <ClInclude Include="D:\works\CardGame\Resources\CloseSelected.png" />
+    <ClInclude Include="D:\works\CardGame\Resources\HelloWorld.png" />
+    <ClInclude Include="D:\works\CardGame\Resources\fonts\Marker Felt.ttf" />
+    <ClInclude Include="D:\works\CardGame\Resources\fonts\arial.ttf" />
+    <ClInclude Include="D:\works\CardGame\Resources\levels\level_1.json" />
+    <ClInclude Include="D:\works\CardGame\Resources\res\.gitkeep" />
+    <ClCompile Include="D:\works\CardGame\cocos2d\cocos\precheader.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\works\CardGame\build\ZERO_CHECK.vcxproj">
+      <Project>{2938EA5F-447D-376B-9057-D675467DB892}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\cocos\core\cocos2d.vcxproj">
+      <Project>{8B784322-A819-3A20-BD72-4686B17D5EFB}</Project>
+      <Name>cocos2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\clipper\ext_clipper.vcxproj">
+      <Project>{063816C2-49BD-3BF0-B0F4-C1A88BC1FE0B}</Project>
+      <Name>ext_clipper</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\ConvertUTF\ext_convertUTF.vcxproj">
+      <Project>{97E35E36-C08C-3CA6-BBD2-99F1A9D5DD8A}</Project>
+      <Name>ext_convertUTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\edtaa3func\ext_edtaa3func.vcxproj">
+      <Project>{1CF5C3C8-55BA-3939-9949-D37A51FDF606}</Project>
+      <Name>ext_edtaa3func</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\md5\ext_md5.vcxproj">
+      <Project>{83DB3FDE-175A-3A28-A9ED-4F66E6D2BB78}</Project>
+      <Name>ext_md5</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\poly2tri\ext_poly2tri.vcxproj">
+      <Project>{569CDFE3-1C21-35EF-9A17-35043707441D}</Project>
+      <Name>ext_poly2tri</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\recast\ext_recast.vcxproj">
+      <Project>{1C43094C-D511-3C21-A44A-B1B4665844F7}</Project>
+      <Name>ext_recast</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\tinyxml2\ext_tinyxml2.vcxproj">
+      <Project>{F1924669-B9B0-3712-A158-6EF87969AFE3}</Project>
+      <Name>ext_tinyxml2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\unzip\ext_unzip.vcxproj">
+      <Project>{D1A51551-8FD1-3913-A020-55FF4213CA92}</Project>
+      <Name>ext_unzip</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\xxhash\ext_xxhash.vcxproj">
+      <Project>{1308F559-45BC-3328-8F17-FC6FA5089289}</Project>
+      <Name>ext_xxhash</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\xxtea\ext_xxtea.vcxproj">
+      <Project>{C0890676-BCE6-3670-89FD-D2E8A7C9CE58}</Project>
+      <Name>ext_xxtea</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\external.vcxproj">
+      <Project>{D64848B4-CB4C-3B8C-A9BC-DF7B728111A0}</Project>
+      <Name>external</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

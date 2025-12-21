@@ -20,20 +20,26 @@ struct UndoRecord
     enum class OperationType
     {
         CARD_MOVE = 0,      // 卡牌移动
-        CARD_FLIP = 1       // 卡牌翻转
+        CARD_FLIP = 1,      // 卡牌翻转
+        PLAYFIELD_TO_STACK = 2,  // Playfield卡牌匹配到Stack
+        STACK_SUPPLEMENT = 3      // Stack补牌操作
     };
     
     OperationType operationType;    // 操作类型
-    int sourceCardId;               // 源卡牌ID
-    int targetCardId;               // 目标卡牌ID（如果有）
+    int sourceCardId;               // 源卡牌ID（Playfield中的卡牌或Stack中被点击的卡牌）
+    int targetCardId;               // 目标卡牌ID（Stack中的质底牌）
     Vec2 sourcePosition;            // 源位置
     Vec2 targetPosition;            // 目标位置
     bool sourceVisible;             // 源可见性
     bool targetVisible;             // 目标可见性
+    int removedPlayfieldCardId;     // 移除的Playfield卡牌ID（用于PLAYFIELD_TO_STACK）
+    int removedStackCardId;         // 移除的Stack质底牌ID
+    std::vector<int> stackCardIds;  // 撤销前Stack中的所有卡牌ID（按顺序）
     
     UndoRecord() : operationType(OperationType::CARD_MOVE), 
                    sourceCardId(-1), targetCardId(-1),
-                   sourceVisible(true), targetVisible(true) {}
+                   sourceVisible(true), targetVisible(true),
+                   removedPlayfieldCardId(-1), removedStackCardId(-1) {}
 };
 
 /**

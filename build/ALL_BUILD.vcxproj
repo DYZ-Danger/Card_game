@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC5CD1EB-637C-334F-BB9B-ECEB0821F95B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\works\CardGame\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/works/CardGame/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\cmake\bin\cmake.exe -SD:/works/CardGame -BD:/works/CardGame/build --check-stamp-file D:/works/CardGame/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\cmake\share\cmake-4.1\Modules\CMakeCCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeCCompilerABI.c;D:\cmake\share\cmake-4.1\Modules\CMakeCInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCXXCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeCXXCompilerABI.cpp;D:\cmake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCompilerIdDetection.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCXXCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerABI.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerId.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerSupport.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineRCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineSystem.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeFindBinUtils.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseArguments.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseImplicitLinkInfo.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseLibraryArchitecture.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeRCCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeSystem.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCXXCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCompilerCommon.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestRCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Diab-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\LCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Renesas-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TI-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CompilerId\VS-10.vcxproj.in;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeInspectCLinker.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeInspectCXXLinker.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\FeatureTesting.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-Determine-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeCCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeSystem.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosConfigDepend.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\works\CardGame\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/works/CardGame/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\cmake\bin\cmake.exe -SD:/works/CardGame -BD:/works/CardGame/build --check-stamp-file D:/works/CardGame/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\cmake\share\cmake-4.1\Modules\CMakeCCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeCCompilerABI.c;D:\cmake\share\cmake-4.1\Modules\CMakeCInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCXXCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeCXXCompilerABI.cpp;D:\cmake\share\cmake-4.1\Modules\CMakeCXXInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCommonLanguageInclude.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeCompilerIdDetection.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCXXCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerABI.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerId.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineCompilerSupport.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineRCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeDetermineSystem.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeFindBinUtils.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeGenericSystem.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeInitializeConfigs.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeLanguageInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseArguments.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseImplicitLinkInfo.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeParseLibraryArchitecture.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeRCCompiler.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeRCInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeSystem.cmake.in;D:\cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInformation.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeSystemSpecificInitialize.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCXXCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestCompilerCommon.cmake;D:\cmake\share\cmake-4.1\Modules\CMakeTestRCCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\CrayClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Diab-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\LCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\OrangeC-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Renesas-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TI-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TIClang-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\cmake\share\cmake-4.1\Modules\CompilerId\VS-10.vcxproj.in;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCXXLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeCommonLinkerInformation.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeDetermineLinkerId.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeInspectCLinker.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\CMakeInspectCXXLinker.cmake;D:\cmake\share\cmake-4.1\Modules\Internal\FeatureTesting.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Linker\MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Linker\Windows-MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-Determine-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-Initialize.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-C.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC-CXX.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows-MSVC.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\Windows.cmake;D:\cmake\share\cmake-4.1\Modules\Platform\WindowsPaths.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeCCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeCXXCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeRCCompiler.cmake;D:\works\CardGame\build\CMakeFiles\4.1.1\CMakeSystem.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\works\CardGame\cocos2d\cmake\Modules\CocosConfigDepend.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\works\CardGame\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="D:\works\CardGame\build\ZERO_CHECK.vcxproj">
+      <Project>{2938EA5F-447D-376B-9057-D675467DB892}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\CardGame.vcxproj">
+      <Project>{7773DFB9-2BC0-32A0-87A6-17DA0E924169}</Project>
+      <Name>CardGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\cocos\core\cocos2d.vcxproj">
+      <Project>{8B784322-A819-3A20-BD72-4686B17D5EFB}</Project>
+      <Name>cocos2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\clipper\ext_clipper.vcxproj">
+      <Project>{063816C2-49BD-3BF0-B0F4-C1A88BC1FE0B}</Project>
+      <Name>ext_clipper</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\ConvertUTF\ext_convertUTF.vcxproj">
+      <Project>{97E35E36-C08C-3CA6-BBD2-99F1A9D5DD8A}</Project>
+      <Name>ext_convertUTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\edtaa3func\ext_edtaa3func.vcxproj">
+      <Project>{1CF5C3C8-55BA-3939-9949-D37A51FDF606}</Project>
+      <Name>ext_edtaa3func</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\md5\ext_md5.vcxproj">
+      <Project>{83DB3FDE-175A-3A28-A9ED-4F66E6D2BB78}</Project>
+      <Name>ext_md5</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\poly2tri\ext_poly2tri.vcxproj">
+      <Project>{569CDFE3-1C21-35EF-9A17-35043707441D}</Project>
+      <Name>ext_poly2tri</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\recast\ext_recast.vcxproj">
+      <Project>{1C43094C-D511-3C21-A44A-B1B4665844F7}</Project>
+      <Name>ext_recast</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\tinyxml2\ext_tinyxml2.vcxproj">
+      <Project>{F1924669-B9B0-3712-A158-6EF87969AFE3}</Project>
+      <Name>ext_tinyxml2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\unzip\ext_unzip.vcxproj">
+      <Project>{D1A51551-8FD1-3913-A020-55FF4213CA92}</Project>
+      <Name>ext_unzip</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\xxhash\ext_xxhash.vcxproj">
+      <Project>{1308F559-45BC-3328-8F17-FC6FA5089289}</Project>
+      <Name>ext_xxhash</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\xxtea\ext_xxtea.vcxproj">
+      <Project>{C0890676-BCE6-3670-89FD-D2E8A7C9CE58}</Project>
+      <Name>ext_xxtea</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\works\CardGame\build\engine\external\external.vcxproj">
+      <Project>{D64848B4-CB4C-3B8C-A9BC-DF7B728111A0}</Project>
+      <Name>external</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

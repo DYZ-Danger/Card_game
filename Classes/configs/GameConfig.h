@@ -29,8 +29,8 @@ public:
     static constexpr float kStackAreaHeight = 580.0f;
     
     // 卡牌尺寸
-    static constexpr float kCardWidth = 120.0f;
-    static constexpr float kCardHeight = 160.0f;
+    static constexpr float kCardWidth = 180.0f;
+    static constexpr float kCardHeight = 240.0f;
     
     // 动画时长
     static constexpr float kCardMoveAnimationDuration = 0.3f;

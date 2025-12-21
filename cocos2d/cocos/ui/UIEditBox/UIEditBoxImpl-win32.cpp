@@ -39,6 +39,16 @@ THE SOFTWARE.
 #include <windows.h>
 #include "ui/UIHelper.h"
 
+// Compatibility for modern Windows SDK where these macros are deprecated
+#ifndef GWL_STYLE
+#define GWL_STYLE (-16)
+#endif
+#ifndef GWL_WNDPROC
+#define GWL_WNDPROC (-4)
+#endif
+#ifndef GWL_USERDATA
+#define GWL_USERDATA (-21)
+#endif
 
 NS_CC_BEGIN
 

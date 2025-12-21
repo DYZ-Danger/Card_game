@@ -89,8 +89,6 @@ protected:
 private:
     Card* _cardModel;               // 关联的数据模型
     Sprite* _cardSprite;            // 卡牌精灵
-    
-    CREATE_FUNC(CardView);
 };
 
 #endif // __CARD_VIEW_H__

@@ -114,8 +114,6 @@ private:
     
     std::function<void(int)> _onCardClickCallback;      // 卡牌点击回调
     std::function<void()> _onUndoClickCallback;         // 撤销点击回调
-    
-    CREATE_FUNC(GameView);
 };
 
 #endif // __GAME_VIEW_H__

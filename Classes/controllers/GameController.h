@@ -15,12 +15,18 @@
 
 USING_NS_CC;
 
+// 前向声明
+class UndoManager;
+
 /**
  * @brief 游戏主控制器
  * @details 控制整个游戏的逻辑流程，协调模型和视图
  */
 class GameController : public Ref
 {
+    // 友元类声明
+    friend class UndoManager;
+    
 public:
     /**
      * @brief 创建游戏控制器
@@ -99,6 +105,97 @@ protected:
      */
     void _bindCallbacks();
     
+    /**
+     * @brief 处理Playfield卡牌点击（匹配逻辑）
+     * @param cardId 被点击的卡牌ID
+     * @param clickedCard 被点击的卡牌指针
+     * @return bool 是否成功处理
+     */
+    bool _handlePlayfieldCardClick(int cardId, Card* clickedCard);
+    
+    /**
+     * @brief 处理Stack卡牌点击（补牌逻辑）
+     * @param cardId 被点击的卡牌ID
+     * @param clickedCard 被点击的卡牌指针
+     * @return bool 是否成功处理
+     */
+    bool _handleStackCardClick(int cardId, Card* clickedCard);
+    
+    /**
+     * @brief 刷新Stack显示（更新位置和视图）
+     */
+    void _refreshStackDisplay();
+    
+    /**
+     * @brief 执行撤销操作（由UndoManager回调）
+     * @param record 撤销记录
+     */
+    void _applyUndo(const UndoRecord& record);
+    
+    /**
+     * @brief 撤销Playfield→Stack的匹配操作
+     * @param record 撤销记录
+     */
+    void _undoPlayfieldToStack(const UndoRecord& record);
+    
+    /**
+     * @brief 撤销Stack补牌操作
+     * @param record 撤销记录
+     */
+    void _undoStackSupplement(const UndoRecord& record);
+    
+    /**
+     * @brief 创建Playfield匹配的撤销记录
+     * @param cardId 点击的卡牌ID
+     * @param clickedCard 点击的卡牌
+     * @param rightStackCard Stack右边的质底牌
+     * @return UndoRecord 撤销记录
+     */
+    UndoRecord _createMatchUndoRecord(int cardId, Card* clickedCard, Card* rightStackCard);
+    
+    /**
+     * @brief 执行卡牌匹配动画和后续处理
+     * @param cardId 点击的卡牌ID
+     * @param clickedCard 点击的卡牌
+     * @param rightStackCard Stack右边的质底牌
+     */
+    void _executeMatchAnimation(int cardId, Card* clickedCard, Card* rightStackCard);
+    
+    /**
+     * @brief 执行匹配后的模型更新
+     * @param clickedCard 点击的卡牌
+     * @param rightStackCard Stack右边的质底牌
+     */
+    void _updateModelAfterMatch(Card* clickedCard, Card* rightStackCard);
+    
+    /**
+     * @brief 移除当前Stack中所有卡牌的视图
+     */
+    void _removeAllStackViews();
+    
+    /**
+     * @brief 根据撤销记录恢复Stack卡牌
+     * @param record 撤销记录
+     */
+    void _restoreStackFromRecord(const UndoRecord& record);
+    
+    /**
+     * @brief 恢复Playfield卡牌
+     * @param record 撤销记录
+     */
+    void _restorePlayfieldCard(const UndoRecord& record);
+    
+    /**
+     * @brief 重建Stack的所有视图
+     */
+    void _rebuildStackViews();
+    
+    /**
+     * @brief 为Stack卡牌创建并添加视图（左边堆+右边单独）
+     * @param stackCards Stack中的所有卡牌
+     */
+    void _createStackCardViews(const std::vector<Card*>& stackCards);
+
 private:
     GameModel* _gameModel;              // 游戏数据模型
     GameView* _gameView;                // 游戏视图

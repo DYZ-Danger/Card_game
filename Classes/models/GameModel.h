@@ -25,6 +25,7 @@ public:
      * @return GameModel* 游戏模型指针
      */
     static GameModel* create();
+    virtual ~GameModel();
     
     // 游戏状态管理
     void setGameState(GameStateType state) { _gameState = state; }
@@ -74,6 +75,11 @@ public:
     void removeStackCard(Card* card);
     
     /**
+     * @brief 清空堆牌区所有卡牌
+     */
+    void clearStackCards();
+    
+    /**
      * @brief 通过ID查找卡牌
      * @param cardId 卡牌ID
      * @return Card* 找到的卡牌，未找到返回nullptr
@@ -93,11 +99,11 @@ public:
     
 private:
     GameModel();
-    virtual ~GameModel();
     
     GameStateType _gameState;               // 当前游戏状态
     std::vector<Card*> _playfieldCards;     // 主牌区卡牌
     std::vector<Card*> _stackCards;         // 堆牌区卡牌（栈结构，最后一个是顶部）
+    std::vector<Card*> _allCards;           // 所有卡牌的全局列表（用于查找）
 };
 
 #endif // __GAME_MODEL_H__

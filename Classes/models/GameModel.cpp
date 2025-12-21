@@ -25,6 +25,11 @@ void GameModel::addPlayfieldCard(Card* card)
     if (!card) return;
     _playfieldCards.push_back(card);
     card->setArea(CardAreaType::PLAYFIELD);
+    
+    // 同时添加到全局列表（如果还没有）
+    if (std::find(_allCards.begin(), _allCards.end(), card) == _allCards.end()) {
+        _allCards.push_back(card);
+    }
 }
 
 void GameModel::addStackCard(Card* card)
@@ -33,6 +38,11 @@ void GameModel::addStackCard(Card* card)
     card->setStackIndex(_stackCards.size());
     _stackCards.push_back(card);
     card->setArea(CardAreaType::STACK);
+    
+    // 同时添加到全局列表（如果还没有）
+    if (std::find(_allCards.begin(), _allCards.end(), card) == _allCards.end()) {
+        _allCards.push_back(card);
+    }
 }
 
 Card* GameModel::getTopStackCard() const
@@ -59,12 +69,15 @@ void GameModel::removeStackCard(Card* card)
     }
 }
 
+void GameModel::clearStackCards()
+{
+    _stackCards.clear();
+}
+
 Card* GameModel::findCardById(int cardId) const
 {
-    for (auto card : _playfieldCards) {
-        if (card->getCardId() == cardId) return card;
-    }
-    for (auto card : _stackCards) {
+    // 在全局列表中查找
+    for (auto card : _allCards) {
         if (card->getCardId() == cardId) return card;
     }
     return nullptr;

@@ -41,6 +41,7 @@ set(GAME_HEADER)
 
 set(GAME_RES_FOLDER
     "${CMAKE_CURRENT_SOURCE_DIR}/Resources"
+    "${CMAKE_CURRENT_SOURCE_DIR}/res"
     )
 if(APPLE OR WINDOWS)
     cocos_mark_multi_resources(common_res_files RES_TO "Resources" FOLDERS ${GAME_RES_FOLDER})
@@ -48,13 +49,49 @@ endif()
 
 # add cross-platforms source files and header files 
 list(APPEND GAME_SOURCE
-     Classes/AppDelegate.cpp
-     Classes/HelloWorldScene.cpp
-     )
-list(APPEND GAME_HEADER
-     Classes/AppDelegate.h
-     Classes/HelloWorldScene.h
-     )
+    # 应用入口
+    Classes/AppDelegate.h
+    Classes/AppDelegate.cpp
+
+    # 配置层
+    Classes/configs/CardEnums.h
+    Classes/configs/GameConfig.h
+    Classes/configs/LevelConfig.h
+    
+    # 模型层
+    Classes/models/Card.h
+    Classes/models/Card.cpp
+    Classes/models/GameModel.h
+    Classes/models/GameModel.cpp
+    Classes/models/UndoModel.h
+    Classes/models/UndoModel.cpp
+    
+    # 视图层
+    Classes/views/CardView.h
+    Classes/views/CardView.cpp
+    Classes/views/GameView.h
+    Classes/views/GameView.cpp
+    
+    # 控制器层
+    Classes/controllers/GameController.h
+    Classes/controllers/GameController.cpp
+    
+    # 管理器层
+    Classes/managers/UndoManager.h
+    Classes/managers/UndoManager.cpp
+    
+    # 服务层
+    Classes/services/GameModelGenerator.h
+    Classes/services/GameModelGenerator.cpp
+    
+    # 工具层
+    Classes/utils/LevelConfigLoader.h
+    Classes/utils/LevelConfigLoader.cpp
+    
+    # 场景
+    Classes/GameScene.h
+    Classes/GameScene.cpp
+)
 
 if(ANDROID)
     # change APP_NAME to the share library name for Android, it's value depend on AndroidManifest.xml

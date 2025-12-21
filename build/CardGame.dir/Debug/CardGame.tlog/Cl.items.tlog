@@ -1,0 +1,13 @@
+D:\works\CardGame\Classes\AppDelegate.cpp;D:\works\CardGame\build\CardGame.dir\Debug\AppDelegate.obj
+D:\works\CardGame\Classes\models\Card.cpp;D:\works\CardGame\build\CardGame.dir\Debug\Card.obj
+D:\works\CardGame\Classes\models\GameModel.cpp;D:\works\CardGame\build\CardGame.dir\Debug\GameModel.obj
+D:\works\CardGame\Classes\models\UndoModel.cpp;D:\works\CardGame\build\CardGame.dir\Debug\UndoModel.obj
+D:\works\CardGame\Classes\views\CardView.cpp;D:\works\CardGame\build\CardGame.dir\Debug\CardView.obj
+D:\works\CardGame\Classes\views\GameView.cpp;D:\works\CardGame\build\CardGame.dir\Debug\GameView.obj
+D:\works\CardGame\Classes\controllers\GameController.cpp;D:\works\CardGame\build\CardGame.dir\Debug\GameController.obj
+D:\works\CardGame\Classes\managers\UndoManager.cpp;D:\works\CardGame\build\CardGame.dir\Debug\UndoManager.obj
+D:\works\CardGame\Classes\services\GameModelGenerator.cpp;D:\works\CardGame\build\CardGame.dir\Debug\GameModelGenerator.obj
+D:\works\CardGame\Classes\utils\LevelConfigLoader.cpp;D:\works\CardGame\build\CardGame.dir\Debug\LevelConfigLoader.obj
+D:\works\CardGame\Classes\GameScene.cpp;D:\works\CardGame\build\CardGame.dir\Debug\GameScene.obj
+D:\works\CardGame\proj.win32\main.cpp;D:\works\CardGame\build\CardGame.dir\Debug\main.obj
+D:\works\CardGame\cocos2d\cocos\precheader.cpp;D:\works\CardGame\build\CardGame.dir\Debug\precheader.obj
